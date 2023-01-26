@@ -4,7 +4,7 @@ function Playlist_items(props) {
     const allPlaylists = props.playlists.map((item, index) => {
         return <Playlist_list_items name={item.name} 
                                     key={index} 
-                                    value={index} 
+                                    playlistNumber={index} 
                                     playlistToDisplay={(e) => props.playlistToDisplay(e)} 
                                     editPlaylistName={(index) => props.editPlaylistName(index)}
                                     playlistDisplayed={props.playlistDisplayed}
@@ -17,7 +17,7 @@ function Playlist_items(props) {
             <ul id="playlists">
             {allPlaylists}
             </ul>
-            <input type="text" id="name-playlist" placeholder='Create new playlist...' onChange={(e) => props.newPlaylistInput(e)}/>
+            <input type="text" id="name-playlist" placeholder='Create new playlist...' onChange={(e) => props.inputNewPlaylistName(e)}/>
             <button onClick={() => props.addNewPlaylist()}>+</button>
         </div>
     )

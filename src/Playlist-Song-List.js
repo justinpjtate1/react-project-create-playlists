@@ -1,7 +1,14 @@
 import Playlist_song from "./Playlist-song"
 
 function Playlist_song_list(props) {
-    const allSongs = props.playlistSongs.map((song, index) => <Playlist_song item={song} key={index} number={index} removeFromPlaylist={(num) => props.removeFromPlaylist(num)}/>)
+    const allSongs = props.playlistSongListToShow.map((song, index) => {
+        return <Playlist_song item={song}
+                              key={index} 
+                              songNumber={index} 
+                              removeFromPlaylist={(num) => props.removeFromPlaylist(num)}
+                              />
+        })
+
     return(
         <div className="playlist-song-list" id="playlist-song-list">
             <div>Selected Playlist: {props.nameOfPlaylistToDisplay}</div>

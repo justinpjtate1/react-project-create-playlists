@@ -13,13 +13,14 @@ class Add_To_Playlist extends Component {
         this.setState({
                 check: !this.state.check
             },
-            () => {
-                    if(this.state.check === true) {
-                        this.props.resultChecked()
-                    } else if(this.state.check === false) {
-                        this.props.resultUnchecked()
-                    }         
-            }
+            () => this.state.check ? this.props.addToPlaylistQueue() : this.props.removeFromPlaylistQueue()
+            // () => {
+            //         if(this.state.check === true) {
+            //             this.props.addToPlaylistQueue()
+            //         } else if(this.state.check === false) {
+            //             this.props.removeFromPlaylistQueue()
+            //         }         
+            // }
         )
     
     }
@@ -32,5 +33,22 @@ class Add_To_Playlist extends Component {
         )
     }
 }
+
+// const Add_To_Playlist = (props) => {
+//     const [check, setCheck] = useState(false)
+
+//     // useEffect(() => check ? props.addToPlaylistQueue() : props.removeFromPlaylistQueue())
+
+//     const toggleCheck = () => {
+//         setCheck(prevCheck => !prevCheck);
+//     }
+
+//     return(
+//         <input type="checkbox"  className="song-checkbox" id="song-checkbox-search" onClick={() => {
+//             toggleCheck()
+//             check ? console.log('true') : console.log('false')
+//         }}/>
+//     )
+// }
 
 export default Add_To_Playlist;
