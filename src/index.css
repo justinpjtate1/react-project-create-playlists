@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Dosis', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: lightslategray;
+  color: rgb(233, 233, 233);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.search-result {
+  /* background-color: grey; */
+  margin: 10px 0px;
+  display: grid;
+  grid-template-rows: 0.5fr 0.5fr;
+  grid-template-columns: 0.33fr 0.33fr 0.34fr;
+  border: solid;
+  border-radius: 12px;
+}
+
+#song-artwork-search {
+  grid-column: 1;
+  grid-row: 1;
+  margin: 4px;
+}
+
+#song-title-search {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0
+}
+
+#song-album-search {
+  grid-row: 2 / span 2;
+  margin: 0;
+}
+
+#song-artist-search {
+  grid-column: 2;
+  grid-row: 2;
+  margin: 0;
+  
+}
+
+#song-checkbox-search {
+  grid-column: 3;
+  grid-row: 1;
+  max-height: 30px
+}
+
+#playlist-song, #playlist-titles {
+  display: grid;
+  grid-template-columns: 0.3fr 0.3fr 0.3fr 0.1fr;
+  grid-template-rows: 1fr;
+  border: solid;
+}
+
+#remove-song-playlist {
+  max-height: 20px
+}
+
+#playlists {
+  list-style: none;
+  margin: 0;
+}
+
+#list-of-playlists {
+  border: solid;
+}
+
+.edit-pencil {
+  max-height: 15px
+}
+
+.playlist-item {
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 10px
+}
+
+li:active {
+  background-color: rgb(233, 233, 233);
+  color: lightslategray;
+}
+
+#search-container {
+  min-height: 600px;
+  min-width: 400px;
+  margin-right: 5px;
+}
+
+#playlist-container {
+  margin-left: 5px;
+  display: flex;
+  flex-direction: horizontal;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  grid-template-rows: 1fr;
+}
+
+#playlist-song-list {
+  flex-grow: 1;
+}
