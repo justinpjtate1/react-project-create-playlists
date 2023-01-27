@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# React.js_Music_UI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The user should be able to search for songs, add them to a playlist and discover new songs that can also be added to playlists.
 
-## Available Scripts
+In the MVP I will have the search and playlists on the same page.
 
-In the project directory, you can run:
+I will use the iTunes search API (20 calls limit per minute) for the initial MVP features, but will explore other APIs for music lyrics and events - I have some in mind, but I’m not sure how to connect using oAuth.
 
-### `npm start`
+Wireframes: (As I think Lyrics and Events are extra features, I haven't designed them yet)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+user stories:
+- As a user I should be able to search songs by song name or by artist
+- As a user, I should be able to create playlists
+- As a user, I should be able to add searched songs to playlist(s) of choice.
+- As a user, I want to see other recommended songs that can be added to my playlist(s)
+- As a user, I want to remove songs from my playlist
+- As a user, I want to edit the order of my playlist
+- As a user, I want to clear all songs in a playlist
+Components required:
+* Base app
+* Search container
+* Search result
+* Discovery items
+* Playlist container
+* List item for each playlist
+* list item for each song added
+States:
+* search results
+* All Playlists (object)
+* Songs in each playlist (array)
+* Songs to discover (array)
+[Wireframes - Project 2 V1.pdf](https://github.com/justinpjtate1/React.js_Music_UI/files/10480485/Wireframes.-.Project.2.V1.pdf)
