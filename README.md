@@ -86,6 +86,8 @@ States:
     - Using the useState() hook to make state setting more straightforward
     - Being able to pass functions from the top component through child components to update states on the parent level.
     - Using a callback function on the checkboxes to introduce a side-effect I needed
+    
+    <img width="746" alt="Screenshot 2023-01-27 at 13 29 38" src="https://user-images.githubusercontent.com/119341279/215107806-2db524da-3e03-4499-9651-00c5ef470679.png">
 
 
 ## Challenges
