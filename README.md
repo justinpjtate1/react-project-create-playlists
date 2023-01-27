@@ -72,6 +72,9 @@ States:
     - handling the search input
     - Passing the search input into the API call and returning an array of objects with 5 results
     - Adding the selected songs to an array that can eventually be added to a playlist
+<img width="897" alt="Screenshot 2023-01-27 at 13 33 29" src="https://user-images.githubusercontent.com/119341279/215107818-e3bb9e18-4b94-4261-adf5-b2f5e13278b0.png">
+
+
 - Next step was to set the add to playlist functionality.
     - Firstly I wanted a state that showed which playlist the user had selected to add to.
     - Then I had to push the selected songs into the selected playlist
@@ -79,15 +82,24 @@ States:
     - Next step was to be able to remove some items and all items from a playlist.
         - Had a similar challenge to adding a playlist, but I was able to work out a helper function that removed duplicated code.
     - I wanted the user to be able to add and rename playlists
+<img width="1056" alt="Screenshot 2023-01-27 at 13 33 43" src="https://user-images.githubusercontent.com/119341279/215107822-141c882b-1c80-458e-b1e2-48cd613507f1.png">
+
+
 - Then I had to render the child components and pass the functions down effectively
+<img width="752" alt="Screenshot 2023-01-27 at 13 34 32" src="https://user-images.githubusercontent.com/119341279/215107828-d3cd87a3-0221-41e1-957c-7467069dfa70.png">
+
+
 
 - The parts I was most proud of:
     - The helper function for modifying the playlists array. Managed to save duplicated code.
+<img width="960" alt="Screenshot 2023-01-27 at 13 30 13" src="https://user-images.githubusercontent.com/119341279/215107812-82f0b642-ebe1-4fdd-9157-1b033f6d40d5.png">
     - Using the useState() hook to make state setting more straightforward
+<img width="746" alt="Screenshot 2023-01-27 at 13 29 38" src="https://user-images.githubusercontent.com/119341279/215107806-2db524da-3e03-4499-9651-00c5ef470679.png">
     - Being able to pass functions from the top component through child components to update states on the parent level.
     - Using a callback function on the checkboxes to introduce a side-effect I needed
+<img width="961" alt="Screenshot 2023-01-27 at 13 31 44" src="https://user-images.githubusercontent.com/119341279/215107816-eb8e7ac4-2698-446c-88ca-599ea4649def.png">
     
-    <img width="746" alt="Screenshot 2023-01-27 at 13 29 38" src="https://user-images.githubusercontent.com/119341279/215107806-2db524da-3e03-4499-9651-00c5ef470679.png">
+    
 
 
 ## Challenges
