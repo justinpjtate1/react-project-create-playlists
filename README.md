@@ -38,10 +38,12 @@ As an MVP version, the user should be able to search for songs, add them to a pl
 
 I will use the iTunes search API (20 calls limit per minute) for the initial MVP features
 
+Wireframes below and download link: [Wireframes - Project 2 V1.pdf](https://github.com/justinpjtate1/React.js_Music_UI/files/10480485/Wireframes.-.Project.2.V1.pdf)
+
 <img width="1010" alt="Screenshot 2023-01-27 at 14 23 09" src="https://user-images.githubusercontent.com/119341279/215109602-5d6794ef-9afc-4602-926f-80b63a2b92c5.png">
 <img width="995" alt="Screenshot 2023-01-27 at 14 23 20" src="https://user-images.githubusercontent.com/119341279/215109609-ec38a908-bfc3-4b9d-945d-502d378c3a33.png">
 
-Wireframes: [Wireframes - Project 2 V1.pdf](https://github.com/justinpjtate1/React.js_Music_UI/files/10480485/Wireframes.-.Project.2.V1.pdf)
+
 
 ## Planning
 
