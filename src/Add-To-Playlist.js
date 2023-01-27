@@ -14,13 +14,6 @@ class Add_To_Playlist extends Component {
                 check: !this.state.check
             },
             () => this.state.check ? this.props.addToPlaylistQueue() : this.props.removeFromPlaylistQueue()
-            // () => {
-            //         if(this.state.check === true) {
-            //             this.props.addToPlaylistQueue()
-            //         } else if(this.state.check === false) {
-            //             this.props.removeFromPlaylistQueue()
-            //         }         
-            // }
         )
     
     }
