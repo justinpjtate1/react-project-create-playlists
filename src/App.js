@@ -91,7 +91,7 @@ const App = (props) => {
     }
 
     const updatePlaylistSelectedInDropdown = (e) => {
-        setPlaylistSelectedInDropdown(+(e.target.value))
+      setPlaylistSelectedInDropdown(+(e.target.value))
     }
 
     const inputNewPlaylistName = (e) => {
@@ -129,6 +129,7 @@ const App = (props) => {
       <button onClick={handleSearchClick}>Search!</button>
       
       <main>
+        <div id="main-container">
         <Search searchResults={searchResults} 
                 addToPlaylistQueue={addToPlaylistQueue}
                 removeFromPlaylistQueue={removeFromPlaylistQueue} 
@@ -144,11 +145,14 @@ const App = (props) => {
                             nameOfPlaylistToDisplay={playlists[playlistDisplayed].name}
                             playlistDisplayed={playlistDisplayed}
         />
+        </div>
+        
+      
+        <select id="dropdown" onChange={updatePlaylistSelectedInDropdown}>
+          {allPlaylistDropdowns}
+        </select>
+        <button id="add-to-playlist" onClick={addToSelectedPlaylist} >Add To Playlist</button>
       </main>
-      <select id="dropdown" onChange={updatePlaylistSelectedInDropdown}>
-        {allPlaylistDropdowns}
-      </select>
-      <button onClick={addToSelectedPlaylist} >Add To Playlist</button>
       </>
     )
 }

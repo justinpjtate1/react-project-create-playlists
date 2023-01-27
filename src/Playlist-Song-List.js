@@ -11,12 +11,12 @@ function Playlist_song_list(props) {
 
     return(
         <div className="playlist-song-list" id="playlist-song-list">
-            <div>Selected Playlist: {props.nameOfPlaylistToDisplay}</div>
+            <h3 id="playlist-heading">Selected Playlist: {props.nameOfPlaylistToDisplay}</h3>
             <div className="playlist-titles" id="playlist-titles">
-                <div>Title</div>
-                <div>Artist</div>
-                <div>length</div>
-                <button onClick={() => props.removeAllFromPlaylist()}>Clear All</button>
+                <div className="column-1">Title</div>
+                <div className="column-2">Artist</div>
+                <div className="column-3">length</div>
+                <button className="column-4" onClick={() => props.removeAllFromPlaylist()}>Clear All</button>
             </div>
             {allSongs}
         </div>

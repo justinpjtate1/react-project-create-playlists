@@ -7,18 +7,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: lightslategray;
   color: rgb(233, 233, 233);
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
 
 .search-result {
-  /* background-color: grey; */
   margin: 10px 0px;
   display: grid;
   grid-template-rows: 0.5fr 0.5fr;
@@ -36,25 +27,34 @@ code {
 #song-title-search {
   grid-column: 2;
   grid-row: 1;
-  margin: 0
+  margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 #song-album-search {
   grid-row: 2 / span 2;
   margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 #song-artist-search {
   grid-column: 2;
-  grid-row: 2;
+  grid-row: 2 / span 2;
   margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
   
 }
 
 #song-checkbox-search {
   grid-column: 3;
   grid-row: 1;
-  max-height: 30px
+  max-height: 22px;
 }
 
 #playlist-song, #playlist-titles {
@@ -65,26 +65,37 @@ code {
 }
 
 #remove-song-playlist {
-  max-height: 20px
+  max-height: 20px;
+
+}
+
+#playlist-container {
+  margin: 10px;
+  border: solid;
+  border-radius: 12px
 }
 
 #playlists {
   list-style: none;
   margin: 0;
+  padding: 0;
+  text-align: left;
 }
 
 #list-of-playlists {
-  border: solid;
+  border-style: none solid none none;
 }
 
 .edit-pencil {
-  max-height: 15px
+  max-height: 15px;
+  float: right
 }
 
 .playlist-item {
   cursor: pointer;
   display: inline-block;
-  margin-right: 10px
+  margin-right: 10px;
+  margin-left: 2px
 }
 
 li:active {
@@ -93,7 +104,7 @@ li:active {
 }
 
 #search-container {
-  min-height: 600px;
+  min-height: 525px;
   min-width: 400px;
   margin-right: 5px;
 }
@@ -104,7 +115,7 @@ li:active {
   flex-direction: horizontal;
 }
 
-main {
+#main-container {
   display: grid;
   grid-template-columns: 400px 1fr;
   grid-template-rows: 1fr;
@@ -112,4 +123,63 @@ main {
 
 #playlist-song-list {
   flex-grow: 1;
+}
+
+input, select, ::placeholder {
+  color: rgb(233, 233, 233);
+  background-color: lightslategray;
+}
+
+button, input, select {
+  border: solid;
+  border-radius: 12px;
+  font-family: 'Dosis', sans-serif;
+}
+
+button, select {
+  cursor: pointer
+}
+
+button {
+  color: lightslategray;
+  background-color: rgb(233, 233, 233);
+}
+
+.column-1 {
+  text-align: left;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.column-2, .column-3, .column-4{
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#playlist-heading {
+  margin: 0
+}
+
+@media screen and (max-width: 900px) {
+  main {
+    display: grid;
+    grid-template-rows: 0.5fr 0.5fr 1100px;
+    grid-template-columns: 1fr
+  }
+
+  #dropdown {
+    grid-row: 1
+  }
+
+  #add-to-playlist {
+    grid-row: 2
+  }
+
+  #main-container {
+    grid-template-rows: 600px 1fr;
+    grid-template-columns: 1fr;
+  }
 }
