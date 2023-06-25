@@ -23,6 +23,7 @@ const App = (props) => {
           }
 
     const handleSearchClick = () => {
+      setPlaylistQueue([])
       const endpointUrl = `https://itunes.apple.com/search?term=${searchInput}&media=music&limit=5`;
       axios.get(endpointUrl)
         .then(response => {
@@ -34,11 +35,11 @@ const App = (props) => {
                     album: value.collectionName,
                     minutes: Math.floor(value.trackTimeMillis/60000),
                     seconds: Math.floor((value.trackTimeMillis/1000) % 60)
-                    }
-            )});
-                setSearchResults(resultsArr)
-          })
-        }
+            })
+          });
+          setSearchResults(resultsArr)
+        })
+    }
 
     const returnSearchResultChecked = (indexOfResult) => {
       const newSong = searchResults.filter((song, index) => index === indexOfResult);

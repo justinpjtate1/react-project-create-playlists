@@ -30,17 +30,16 @@ class Add_To_Playlist extends Component {
 // const Add_To_Playlist = (props) => {
 //     const [check, setCheck] = useState(false)
 
-//     // useEffect(() => check ? props.addToPlaylistQueue() : props.removeFromPlaylistQueue())
-
 //     const toggleCheck = () => {
 //         setCheck(prevCheck => !prevCheck);
 //     }
+//     // useEffect(() => check ? props.addToPlaylistQueue() : props.removeFromPlaylistQueue())
+//     useEffect(() => toggleCheck(), check ? props.addToPlaylistQueue() : props.removeFromPlaylistQueue())
+
+    
 
 //     return(
-//         <input type="checkbox"  className="song-checkbox" id="song-checkbox-search" onClick={() => {
-//             toggleCheck()
-//             check ? console.log('true') : console.log('false')
-//         }}/>
+//         <input type="checkbox"  className="song-checkbox" id="song-checkbox-search" onClick={() => toggleCheck()}/>
 //     )
 // }
 
